@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/green.css">
     <title>Landing Page</title>
+    <script src="/script.js" defer></script>
 </head>
 
 
@@ -28,7 +29,7 @@
     <main class="container">
 
         <div class="container2">
-            <section>
+            <section class="card">
                 <div class="imagem">
                     <img src="assets/Developer.svg" alt="">
                 </div>
@@ -43,7 +44,7 @@
 
                 </div>
             </section>
-            <section>
+            <section class="card">
                 <div class="imagem">
                     <img src="assets/undraw_Dev_focus_re_6iwt.svg" alt="">
                 </div>
@@ -59,7 +60,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="card">
                 <div class="imagem">
                     <img src="assets/undraw_experience_design_eq3j.svg" alt="">
                 </div>
@@ -73,7 +74,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="card">
                 <div class="imagem">
                     <img src="assets/undraw_buffer_wq43.svg" alt="">
                 </div>
@@ -88,23 +89,27 @@
                 </div>
             </section>
         </div>
-        <form action="">
+        <form onsubmit="" id="forms">
             <div class="imagens">
                 <img src="/assets/undraw_authentication_fsn5.svg" alt="">
             </div>
             <div class="input-field">
-                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input required type="text" name="name" id="name" placeholder="Your Name">
                 <div class="underline"></div>
             </div>
             <div class="input-field">
-                <input type="email" name="email" id="email" placeholder="Your Email">
+                <input required type="email" name="email" id="email" placeholder="Your Email">
                 <div class="underline"></div>
             </div>
 
-            <button type="submit">Continue</button>
+            <button onclick="verificar()" id="buttom">Continue</button>
 
+            <div class="send">
+                Arroz
+            </div>
 
         </form>
+
 </body>
 
 </html>

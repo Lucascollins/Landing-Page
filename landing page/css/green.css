@@ -10,7 +10,6 @@ body {
     width: 100%;
     overflow-x: hidden;
     height: 100%;
-    overflow-y: hidden;
     background-color: rgb(221, 221, 221);
 }
 
@@ -90,7 +89,7 @@ nav .list li #join:hover {
 
 section {
     display: flex;
-    width: 26vw;
+    max-width: 26vw;
     margin-right: 2rem;
     height: 34vh;
     padding: 4px;
@@ -186,7 +185,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(32, 0, 70);
+    background-color: rgb(64, 14, 126);
     transition: ease-in-out 1s;
     letter-spacing: 1px;
 }
@@ -208,6 +207,7 @@ form {
     align-items: center;
     margin-bottom: 1rem;
     border-radius: 8px;
+    position: relative;
     background-color: rgb(14, 1, 31);
 }
 
@@ -248,3 +248,36 @@ input:focus {
     border: 0;
     outline: none;
 }
+
+.card {
+    min-width: 320px;
+}
+
+.send {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: absolute;
+    /*onde eu quero */
+    z-index: 1;
+    top: 70%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+    background-color: whitesmoke;
+}
+
+
+/*como centralizar um position relative e absolute
+top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;*/
+
+
+/*como eu altero o diplay de uma classe com javascript and como usar timeout*/
