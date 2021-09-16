@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="">
+    <meta http-equiv="X-UA-Compatible" content="Google">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/landing page/css/green.css">
     <title>Landing Page</title>
-    <script src="/script.js" defer></script>
+    <script src="/landing page/script.js" defer></script>
 </head>
 
 
 <nav>
     <div class="image">
-        <img src="/assets/undraw_stars_re_6je7.svg" alt="">
+        <img src="/landing page/assets/undraw_stars_re_6je7.svg" alt="">
     </div>
     <div class="list">
         <li><a href="#">Home</a></li>
@@ -37,7 +37,7 @@
                     <h4>
                         WEB DEVELOPER
                     </h4>
-                    <p class="text">Aprenda a fazer sites e sistemas web usando linguagens de programação (HTML, CSS, JavaScript, NodeJS e mais)</p>
+                    <p class="text">Aprenda a fazer sites e sistemas web usando linguagens de programação.</p>
                     <div class="buttom">
                         <button type="submit">Learn More</button>
                     </div>
@@ -91,18 +91,20 @@
         </div>
         <form onsubmit="" id="forms">
             <div class="imagens">
-                <img src="/assets/undraw_authentication_fsn5.svg" alt="">
+                <img src="/landing page/assets/undraw_authentication_fsn5.svg" alt="">
             </div>
             <div class="input-field">
-                <input required type="text" name="name" id="name" placeholder="Your Name">
+                <input  type="text" name="name" id="name" placeholder="Your Name" onclick="mudarCorName()">
                 <div class="underline"></div>
             </div>
             <div class="input-field">
-                <input required type="email" name="email" id="email" placeholder="Your Email">
+                <input  type="email" name="email" id="email" placeholder="Your Email" onclick="mudarCorEmail()">
                 <div class="underline"></div>
             </div>
-
-            <button onclick="verificar()" id="buttom">Continue</button>
+           
+             <div class="bfom">
+                 <button onclick="verificar()" class="buttom1" >Continue</button>
+                </div>
 
             <div class="send">
                 Arroz

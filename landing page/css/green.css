@@ -73,27 +73,31 @@ nav .list li #join:hover {
 
 .container {
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 75vh;
+    max-width: 1800px;
     flex-direction: row;
-    margin-left: 2rem;
+    margin: 2rem;
     padding: 1rem;
 }
 
 .container2 {
-    width: 60vw;
-    height: 70vh;
+    justify-content:center ;
+    align-items: center;
+    max-width: 60vw;
+    min-height: 10vh;
+    height: 65vh;
     display: flex;
     flex-wrap: wrap;
 }
 
 section {
+    margin-left:1rem;
     display: flex;
-    max-width: 26vw;
+    max-width:25vw;
+    justify-content: center;
     margin-right: 2rem;
-    height: 34vh;
+    height: 28vh;
     padding: 4px;
-    margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
     background-color: rgb(255, 255, 255);
@@ -101,18 +105,20 @@ section {
 
 .container3 {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding: 0.5rem;
     max-width: 100vw;
+    margin-right: 20px;
     height: 100%;
-    margin-left: 0.5rem;
+    margin-left: 20px;
     justify-content: center;
 }
 
 h4 {
-    margin-top: 1rem;
     margin-left: 10px;
-    font-size: 11pt;
+    font-size: 13pt;
 }
 
 .container4 {
@@ -124,14 +130,14 @@ h4 {
 }
 
 .text {
-    width: 200px;
+    max-width: 200px;
     height: 80px;
     margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    font-size: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 13px;
     margin-left: 10px;
     color: rgb(20, 20, 20);
-    max-width: 200px;
+
 }
 
 .imagem {
@@ -146,14 +152,14 @@ h4 {
 }
 
 .image img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin-left: 2.3rem;
 }
 
 .imagem img {
     margin-left: 0.1rem;
-    width: 90px;
+    width: 120px;
     border-radius: 8px;
     height: 100%;
     background-color: rgb(42, 2, 92);
@@ -164,8 +170,13 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
+.bfom {
+    margin-top:3rem;
+}
 button {
     text-align: center;
     font-weight: 600;
@@ -191,8 +202,7 @@ button:hover {
 }
 
 section:first-child {
-    margin-left: 0;
-    margin-bottom: 0px;
+    margin-left: 1rem;
 }
 
 form {
@@ -201,14 +211,17 @@ form {
 }
 
 form {
-    width: 24vw;
-    height: 73vh;
-    margin-top: 1rem;
+    position: absolute;
+    left: 3%;
+    top: 1%;
+    width: 20vw;
+    height: 60vh;
+    padding: 1rem;
+    margin-top:0.5rem;
     align-items: center;
-    margin-bottom: 1rem;
     border-radius: 8px;
     position: relative;
-    background-color: rgb(14, 1, 31);
+    background-color: rgb(255, 255, 255);
 }
 
 .input-field {
@@ -219,16 +232,21 @@ form {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
     width: 120px;
-    background-color: rgb(30, 1, 48);
     border-radius: 50%;
+    background-color: rgb(30, 1, 48);
     height: 120px;
 }
 
 .imagens img {
     margin-left: 0.1rem;
-    width: 100%;
+    width: 90%;
     border-radius: 50%;
     height: 100%;
+}
+::placeholder {
+    color: rgb(73, 68, 68);
+    font-weight: 600;
+    font-size: 12pt;
 }
 
 input {
@@ -237,12 +255,14 @@ input {
     height: 5vh;
     border: 0;
     border-radius: 8px;
-    background-color: rgb(42, 2, 92);
+    border: solid 2px rgb(77, 24, 141);
+    margin-top: 1rem;
 }
 
-::placeholder {
-    color: white;
+::placeholder:focus {
+    color: rgb(240, 240, 240);
 }
+
 
 input:focus {
     border: 0;
