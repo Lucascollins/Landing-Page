@@ -15,17 +15,7 @@ function verificar() {
 
     email.value = ""
     nome.value = ""
-    document.getElementById("name").style.backgroundColor ="" 
-    document.getElementById("email").style.backgroundColor=""
+    
 }
 
 
-function mudarCorName(){
-    document.getElementById("name").style.backgroundColor ="rgb(64, 14, 126)"   
- 
-
-}
-
-function mudarCorEmail(){
-    document.getElementById("email").style.backgroundColor="rgb(64, 14, 126)"
-}
