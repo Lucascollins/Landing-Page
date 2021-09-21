@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --verde: #00DF5E;
+    --cinza:#F9F9F9;
+    --preto:#212121;
+    --second: #171717;
+
+}
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +20,8 @@ body {
     width: 100%;
     overflow-x: hidden;
     height: 100%;
-    background-color: rgb(221, 221, 221);
+    overflow-y:hidden ;
+    background-color: var(--second);
 }
 
 nav {
@@ -19,14 +30,14 @@ nav {
     width: 120%;
     align-items: center;
     padding: 1rem;
-    height: 16vh;
-    background-color: white;
+    height: 13vh;
+    background-color: var(--second);
 }
 
 nav .list {
     display: flex;
     flex-direction: row;
-    margin: 1rem;
+    margin: 12rem;
 }
 
 nav .list li {
@@ -38,9 +49,10 @@ nav .list li {
 }
 
 nav .list li a {
-    color: rgb(20, 20, 20);
+    color: var(--verde);
     text-decoration: none;
     font-weight: 600;
+    font-size: 15pt;
     padding: 4px;
 }
 
@@ -51,14 +63,15 @@ nav .list li a:hover {
 nav .list li #join {
     display: flex;
     flex-direction: column;
-    background-color: rgb(42, 2, 92);
-    font-size: 13px;
-    border-radius: 8px;
+    background-color:var(--verde);
+    font-size: 15pt;
+    border-radius: 40px;
     justify-content: center;
     align-items: center;
     padding: 4px;
     text-align: center;
-    width: 7vw;
+    width: 8vw;
+    height: 4vh;
     color: white;
 }
 
@@ -93,14 +106,15 @@ nav .list li #join:hover {
 section {
     margin-left:1rem;
     display: flex;
-    max-width:25vw;
+    max-width:28vw;
     justify-content: center;
     margin-right: 2rem;
-    height: 28vh;
+    height: 33vh;
     padding: 4px;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem ;
     border-radius: 8px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--preto);
 }
 
 .container3 {
@@ -119,6 +133,7 @@ section {
 h4 {
     margin-left: 10px;
     font-size: 13pt;
+    color:var(--verde);
 }
 
 .container4 {
@@ -136,7 +151,8 @@ h4 {
     margin-bottom: 1.5rem;
     font-size: 13px;
     margin-left: 10px;
-    color: rgb(20, 20, 20);
+    text-align: center;
+    color: rgb(240, 240, 240);
 
 }
 
@@ -162,7 +178,7 @@ h4 {
     width: 120px;
     border-radius: 8px;
     height: 100%;
-    background-color: rgb(42, 2, 92);
+    background-color:var(--verde);
 }
 
 .buttom {
@@ -180,7 +196,7 @@ h4 {
 button {
     text-align: center;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -191,7 +207,7 @@ button {
     border-radius: 20px;
     padding: 4px;
     border: none;
-    background-color: rgb(42, 2, 92);
+    background-color: var(--verde);
     color: white;
 }
 
@@ -211,8 +227,8 @@ form {
 }
 
 form {
-    position: absolute;
-    left: 3%;
+    position: relative;
+    left: 6%;
     top: 1%;
     width: 20vw;
     height: 60vh;
@@ -221,11 +237,12 @@ form {
     align-items: center;
     border-radius: 8px;
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--preto);
 }
 
 .input-field {
     margin-top: 1rem;
+     position: relative;
 }
 
 .imagens {
@@ -244,7 +261,7 @@ form {
     height: 100%;
 }
 ::placeholder {
-    color: rgb(73, 68, 68);
+    color: var(--verde);
     font-weight: 600;
     font-size: 12pt;
 }
@@ -254,14 +271,15 @@ input {
     width: 14vw;
     height: 5vh;
     border: 0;
-    border-radius: 8px;
-    border: solid 2px rgb(77, 24, 141);
+    border-radius: 8px;;
     margin-top: 1rem;
+    background-color: var(--preto);
+}
+input:valid {
+  
+    background-color: var(--preto);
 }
 
-::placeholder:focus {
-    color: rgb(240, 240, 240);
-}
 
 
 input:focus {
@@ -274,14 +292,14 @@ input:focus {
 }
 
 .send {
-    display: none;
+    display:none;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     position: absolute;
     /*onde eu quero */
-    z-index: 1;
-    top: 70%;
+    z-index: 2;
+    top: -120%;
     left: 0;
     bottom: 0;
     right: 0;
@@ -301,3 +319,33 @@ top: 0;
 
 
 /*como eu altero o diplay de uma classe com javascript and como usar timeout*/
+
+
+
+.input-field .underline::before {
+   content: "";
+   position: absolute;
+   height: 4px;
+   width: 100%;
+   left: 0;
+   bottom: -5;
+   background: rgba(0, 0, 0, 0.2);
+}
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: var(--verde);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+
