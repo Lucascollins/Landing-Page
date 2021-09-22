@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 :root{
     --verde: #00DF5E;
-    --cinza:#F9F9F9;
+    --branco:rgb(240,240,240);
     --preto:#212121;
     --second: #171717;
 
@@ -272,11 +272,12 @@ input {
     height: 5vh;
     border: 0;
     border-radius: 8px;;
+    color: white;
+    font-size: 13pt;
     margin-top: 1rem;
     background-color: var(--preto);
 }
 input:valid {
-  
     background-color: var(--preto);
 }
 
@@ -293,20 +294,41 @@ input:focus {
 
 .send {
     display:none;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:space-evenly;
     align-items: center;
     border-radius: 8px;
     position: absolute;
     /*onde eu quero */
     z-index: 2;
-    top: -120%;
+    top: 80%;
     left: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
     width: 200px;
-    height: 100px;
     background-color: whitesmoke;
+}
+
+
+.send .underline-send{
+    content: "";
+    align-self:flex-start;
+    height: 4px;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 4px;
+    width: 80%;
+    left: 0;
+    bottom: -5;
+    animation-name: move;
+    animation-duration: 2s;
+    margin-left: 10%;
+    background-color: var(--verde);
+}
+
+@keyframes move{
+   /*DE 100*/ from {width: 80%;}
+   /*Para 0*/ to{ width: 0%;}
 }
 
 
