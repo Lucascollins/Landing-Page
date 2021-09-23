@@ -229,9 +229,9 @@ form {
 form {
     position: relative;
     left: 6%;
-    top: 1%;
+    top: 15%;
     width: 20vw;
-    height: 60vh;
+    height: 58vh;
     padding: 1rem;
     margin-top:0.5rem;
     align-items: center;
@@ -295,18 +295,17 @@ input:focus {
 .send {
     display:none;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items: center;
     border-radius: 8px;
     position: absolute;
     /*onde eu quero */
-    z-index: 2;
-    top: 80%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 200px;
-    background-color: whitesmoke;
+    top: -20%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    width: 230px;
+    height: 80px;
+    background-color: var(--preto);
 }
 
 
@@ -314,12 +313,13 @@ input:focus {
     content: "";
     align-self:flex-start;
     height: 4px;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     border-radius: 8px;
     padding: 4px;
     width: 80%;
     left: 0;
     bottom: -5;
+    color: white;
     animation-name: move;
     animation-duration: 2s;
     margin-left: 10%;
@@ -349,6 +349,7 @@ top: 0;
    position: absolute;
    height: 4px;
    width: 100%;
+   border-radius: 8px;
    left: 0;
    bottom: -5;
    background: rgba(0, 0, 0, 0.2);
@@ -356,7 +357,8 @@ top: 0;
 .input-field .underline::after {
     content: '';
     position: absolute;
-    height: 3px;
+    height: 4px;
+    border-radius: 8px;
     width: 100%;
     bottom: -5px;
     left: 0;

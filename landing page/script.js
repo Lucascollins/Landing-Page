@@ -9,6 +9,7 @@ const span = document.getElementById("span")
 const send = document.getElementById("underline-send")
 
 
+
 function verificar() {
     const email = document.getElementById("email")
     const nome = document.getElementById("name")
@@ -41,13 +42,20 @@ function verificar() {
 function ConfirmLogin(){
     login.style.display = "flex"
     span.textContent = "Enviado com Sucesso"
-    send.style.backgroundColor = "green"
+    send.style.backgroundColor = "#00DF5E"
+    span.style.color = "#00DF5E"
+    login.style.border ="solid 3px #00DF5E"
+    
+    
 
 }
 function NotConfirmLogin(){
     login.style.display ="flex"
-    span.textContent = "Errou"  
+    span.textContent = "Sem Sucesso" 
     send.style.backgroundColor = "red"
+    span.style.color = "red"
+    login.style.border ="solid 3px red"
+    
 }
 
 function noneModel(element){
