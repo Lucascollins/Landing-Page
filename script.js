@@ -7,19 +7,21 @@ document.getElementById("forms")
 const login = document.getElementById("login")
 const span = document.getElementById("span")
 const send = document.getElementById("underline-send")
+const img = document.getElementById("image")
+const email = document.getElementById("email")
+const nome = document.getElementById("name")
 
 
 
 function verificar() {
-    const email = document.getElementById("email")
-    const nome = document.getElementById("name")
+
     var obj = {
         email:email.value,
         nome:nome.value
     }
 
-    //Regex
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     
     //Confirmation email
     var ver  = email.value.includes("@")
@@ -33,10 +35,9 @@ function verificar() {
     }
 
 
-    setTimeout(()=>noneModel(login),2000)
+    setTimeout(()=>noneModel(login),4000)
 
-    email.value = ""
-    nome.value = ""
+    
     
 }
 function ConfirmLogin(){
@@ -44,23 +45,33 @@ function ConfirmLogin(){
     span.textContent = "Enviado com Sucesso"
     send.style.backgroundColor = "#00DF5E"
     span.style.color = "#00DF5E"
-    login.style.border ="solid 3px #00DF5E"
+    img.src="/aprove.png"
+    
+    email.value = ""
+    nome.value = ""
     
     
-
 }
+
 function NotConfirmLogin(){
     login.style.display ="flex"
-    span.textContent = "Sem Sucesso" 
+    span.textContent = "Verifique seus Dados" 
     send.style.backgroundColor = "red"
     span.style.color = "red"
-    login.style.border ="solid 3px red"
+    img.src="/label.png"
     
+      
 }
+
+
+
+
 
 function noneModel(element){
     
     element.style.display = "none"
+   
+
 }
 
 //arrowfunction,o porque usar ela

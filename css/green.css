@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 :root{
-    --verde: #00DF5E;
+    --verde: #3885fa;
     --branco:rgb(240,240,240);
     --preto:#212121;
     --second: #171717;
@@ -20,8 +20,11 @@ body {
     width: 100%;
     overflow-x: hidden;
     height: 100%;
-    overflow-y:hidden ;
     background-color: var(--second);
+
+    animation-name:fadeInDownBig;
+    animation-duration: 2s;
+    animation-delay: 1s;
 }
 
 nav {
@@ -54,10 +57,12 @@ nav .list li a {
     font-weight: 600;
     font-size: 15pt;
     padding: 4px;
+    transition: all 1s ease-in-out;
 }
 
 nav .list li a:hover {
-    color: rgb(77, 24, 141);
+    color: rgb(121, 231, 167);
+    
 }
 
 nav .list li #join {
@@ -65,6 +70,7 @@ nav .list li #join {
     flex-direction: column;
     background-color:var(--verde);
     font-size: 15pt;
+    font-weight: 600;
     border-radius: 40px;
     justify-content: center;
     align-items: center;
@@ -76,11 +82,9 @@ nav .list li #join {
 }
 
 nav .list li #join:hover {
-    background-color: rgb(32, 0, 70);
+    background-color: rgb(52, 240, 130);    
     letter-spacing: 1px;
     transition: ease 1s;
-    border-radius: 8px;
-    padding: 4px;
     color: white;
 }
 
@@ -106,7 +110,7 @@ nav .list li #join:hover {
 section {
     margin-left:1rem;
     display: flex;
-    max-width:28vw;
+    max-width:30vw;
     justify-content: center;
     margin-right: 2rem;
     height: 33vh;
@@ -149,7 +153,7 @@ h4 {
     height: 80px;
     margin-top: 0.4rem;
     margin-bottom: 1.5rem;
-    font-size: 13px;
+    font-size: 12pt;
     margin-left: 10px;
     text-align: center;
     color: rgb(240, 240, 240);
@@ -158,13 +162,16 @@ h4 {
 
 .imagem {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(32, 0, 70);
-    border-radius: 8px;
-    width: auto;
-    height: auto;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    background-color:rgb(235, 235, 235);
+    border-radius: 40px;
+    padding: 4px;
+    width: 130px;
+    height: 100px;
 }
 
 .image img {
@@ -174,11 +181,8 @@ h4 {
 }
 
 .imagem img {
-    margin-left: 0.1rem;
-    width: 120px;
-    border-radius: 8px;
-    height: 100%;
-    background-color:var(--verde);
+    width: 100%;
+    height:100%;
 }
 
 .buttom {
@@ -196,7 +200,7 @@ h4 {
 button {
     text-align: center;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12pt;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -206,13 +210,14 @@ button {
     height: 6vh;
     border-radius: 20px;
     padding: 4px;
+    margin-top: 3rem;
     border: none;
     background-color: var(--verde);
     color: white;
 }
 
 button:hover {
-    background-color: rgb(64, 14, 126);
+    background-color: rgb(52, 240, 130);    
     transition: ease-in-out 1s;
     letter-spacing: 1px;
 }
@@ -250,7 +255,7 @@ form {
     margin-bottom: 2rem;
     width: 120px;
     border-radius: 50%;
-    background-color: rgb(30, 1, 48);
+    background-color: white;
     height: 120px;
 }
 
@@ -266,6 +271,9 @@ form {
     font-size: 12pt;
 }
 
+::placeholder{
+    color: white;
+}
 input {
     text-align: center;
     width: 14vw;
@@ -295,39 +303,50 @@ input:focus {
 .send {
     display:none;
     flex-direction: column;
-    justify-content:center;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
     border-radius: 8px;
     position: absolute;
     /*onde eu quero */
     top: -20%;
+    left: auto;
     margin-bottom: 60px;
     font-weight: 600;
-    width: 230px;
-    height: 80px;
+    width: 250px;
+    height: 100px;
     background-color: var(--preto);
+
+    /*Animation*/
+    animation-name: zoomInRight;
+    animation-duration: 1s;
 }
 
 
-.send .underline-send{
+span{
+    margin-left: 1rem;
+}
+
+.underline-send{
     content: "";
     align-self:flex-start;
     height: 4px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    margin-bottom: 0;
+    border-radius: 0;
     padding: 4px;
-    width: 80%;
+    width: 100%;
     left: 0;
     bottom: -5;
     color: white;
-    animation-name: move;
-    animation-duration: 2s;
-    margin-left: 10%;
+    margin-left: 0;
     background-color: var(--verde);
+
+    animation-name: move;
+    animation-duration: 4s;
 }
 
 @keyframes move{
-   /*DE 100*/ from {width: 80%;}
+   /*DE 100*/ from {width: 100%;}
    /*Para 0*/ to{ width: 0%;}
 }
 
@@ -345,31 +364,37 @@ top: 0;
 
 
 .input-field .underline::before {
-   content: "";
-   position: absolute;
-   height: 4px;
-   width: 100%;
-   border-radius: 8px;
-   left: 0;
-   bottom: -5;
-   background: rgba(0, 0, 0, 0.2);
-}
-.input-field .underline::after {
-    content: '';
+    content: "";
     position: absolute;
     height: 4px;
-    border-radius: 8px;
     width: 100%;
-    bottom: -5px;
+    border-radius: 8px;
     left: 0;
-    background: var(--verde);
-    transform: scaleX(0);
-    transition: all .3s ease-in-out;
-    transform-origin: left;
+    bottom: -5;
+    background: rgba(0, 0, 0, 0.2);
+ }
+ .input-field .underline::after {
+     content: '';
+     position: absolute;
+     height: 4px;
+     border-radius: 8px;
+     width: 100%;
+     bottom: -5px;
+     left: 0;
+     background: var(--verde);
+     transform: scaleX(0);
+     transition: all .3s ease-in-out;
+     transform-origin: left;
+ }
+ 
+ .input-field input:focus~.underline::after {
+     transform: scaleX(1);
+ }
+
+
+
+#image{
+    margin-top: 1rem;
+    width: 44px;
+    height: 44px;
 }
-
-.input-field input:focus~.underline::after {
-    transform: scaleX(1);
-}
-
-
