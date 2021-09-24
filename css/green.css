@@ -30,7 +30,8 @@ body {
 nav {
     display: flex;
     flex-direction: row;
-    width: 120%;
+    width: 100%;
+    height: 20px;
     align-items: center;
     padding: 1rem;
     height: 13vh;
@@ -39,8 +40,9 @@ nav {
 
 nav .list {
     display: flex;
+    width: 100%;
     flex-direction: row;
-    margin: 12rem;
+    margin: 1rem;
 }
 
 nav .list li {
@@ -91,7 +93,7 @@ nav .list li #join:hover {
 .container {
     display: flex;
     height: 75vh;
-    max-width: 1800px;
+    max-width: 100%;
     flex-direction: row;
     margin: 2rem;
     padding: 1rem;
@@ -206,8 +208,8 @@ button {
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 0;
-    width: 10vw;
-    height: 6vh;
+    width: 100px;
+    height: 60px;
     border-radius: 20px;
     padding: 4px;
     margin-top: 3rem;
@@ -235,7 +237,7 @@ form {
     position: relative;
     left: 6%;
     top: 15%;
-    width: 20vw;
+    width: 26vw;
     height: 58vh;
     padding: 1rem;
     margin-top:0.5rem;
@@ -397,4 +399,36 @@ top: 0;
     margin-top: 1rem;
     width: 44px;
     height: 44px;
+}
+
+@media screen and (max-width: 1002px)  {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .container2{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+
+    }
+    #forms{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height: 500px;
+        margin: auto;
+        margin-right: auto  ;
+        flex-direction: column;
+        margin-bottom: 10rem;
+    }
+    
+    section{
+        max-width:40vw;
+    }
 }
