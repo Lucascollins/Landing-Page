@@ -27,7 +27,7 @@ function verificar() {
     var ver  = email.value.includes("@")
     var verificar =  emailRegex.test(email.value)
 
-    if (nome.value && verificar) {
+    if (nome.value != "" && verificar == true) {
         ConfirmLogin()
         console.log(obj)
     } else {
